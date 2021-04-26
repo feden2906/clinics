@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', apiRouter);
 
-app.use("*", (err, req, res, next) => {
-  console.log(err)
+app.use('*', (err, req, res, next) => {
+  console.log(err);
 
   res
       .status(err.status)
